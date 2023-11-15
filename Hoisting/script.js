@@ -149,3 +149,165 @@ function hoistExample() {
 }
 hoistExample();
 */
+
+/*
+function example() {
+  console.log(a);
+  if (true) {
+    var a = 10;
+    console.log(a); // Syntax Error : a has been already declared.
+    let a = 5;
+  }
+  console.log(a);
+}
+example();
+*/
+
+/*
+console.log(x); // undefined
+var x = 1;
+{
+  console.log(x); // 1
+  var x = 2;
+}
+console.log(x); // 2
+*/
+
+/*
+console.log(namedFunc()); // Type Error : namedFunc is not a function
+var namedFunc = function () {
+  return "I am a named function expression!";
+};
+*/
+
+/*
+console.log(a); // undefined
+var a = 3;
+if (true) {
+  console.log(a); // TDZ
+  let a = 5;
+  console.log(a); //
+}
+console.log(a); //
+*/
+
+/*
+var x = 5;
+function outer() {
+  console.log(x); // undefined
+  if (true) {
+    var x = 10;
+    console.log(x); // 10
+  }
+  console.log(x); // 10
+}
+outer();
+*/
+
+/*
+console.log(foo()); // I am foo!
+console.log(bar()); // Type Error : bar is not a function
+function foo() {
+  return "I am foo!";
+}
+var bar = function () {
+  return "I am bar!";
+};
+*/
+
+/*
+console.log(a); // Reference Error : a is not defined
+if (true) {
+  console.log(a); // TDZ
+  const a = 7;
+  console.log(a); // 7
+}
+console.log(a); // Reference Error : a is not defined
+*/
+
+/*
+console.log(a); // TDZ
+let a = 3;
+if (true) {
+  console.log(a); // TDZ
+  const a = 5;
+  console.log(a); // 5
+}
+console.log(a); // 3
+*/
+
+/*
+console.log(result); // undefined
+var result;
+setTimeout(function () {
+  result = "Async operation completed!";
+}, 1000);
+*/
+
+/*
+console.log(a); // undefined
+var a = 1;
+function b() {
+  console.log(a); // undefined
+  var a = 2;
+  console.log(a); // 2
+}
+b();
+console.log(a); // 1
+*/
+
+/*
+function outer() {
+  console.log(inner()); // Type Error : inner is not a function
+  var inner = function () {
+    return "I am inside!";
+  };
+}
+outer();
+*/
+
+/*
+var x = 1;
+function foo() {
+  console.log(x); // Undefined
+  var x = 2;
+}
+foo();
+*/
+
+/*
+console.log(myObject); // { key: "value" }
+var myObject = { key: "value" };
+*/
+
+/*
+console.log(hoistedVar); // undefined
+var hoistedVar = "I am hoisted!";
+let notHoistedVar = "I am not hoisted!";
+console.log(notHoistedVar); // I am not hoisted!
+*/
+
+/*
+// Syntax Error : a has been re-declared
+console.log(a); 
+let a = 3;
+if (true) {
+  console.log(a); // Output?
+  var a = 5;
+  console.log(a); // Output?
+}
+console.log(a); // Output?
+*/
+
+/*
+var a = 5;
+function outer() {
+  console.log(a); // undefined
+  if (true) {
+    var a = 10;
+    console.log(a); // 10
+  }
+  console.log(a); // 10
+}
+outer();
+*/
