@@ -70,3 +70,82 @@ function example() {
 }
 example();
 */
+
+/*
+
+console.log(a); // undefined
+var a = 10;
+if (true) {
+  //  1) console.log(a); // TDZ
+  //  2) console.log(a); // 10
+
+  //  1) let a = 20;
+  // 2) var a = 20;
+  console.log(a); // 20
+}
+console.log(a); // 20
+*/
+
+/*
+function example() {
+  console.log(a()); // "Function A"
+  //   console.log(b()); // TypeError : b is not a function
+  //   console.log(c()); // TypeError : c is not a function
+  function a() {
+    return "Function A";
+  }
+  var b = function () {
+    return "Function B";
+  };
+  var c = () => "Function C";
+}
+example();
+*/
+
+/*
+var myClassInstance = new MyClass(); // cannot access MyClass before initialization
+class MyClass {
+  constructor() {
+    this.myProperty = "Hello, hoisting!";
+  }
+}
+console.log(myClassInstance.myProperty); // Reference Error
+*/
+
+/*
+function example() {
+  console.log(a); // Reference Error : a is not defined
+  if (true) {
+    let a = 5;
+    console.log(a); // 5
+  }
+  console.log(a); // Reference Error : a is not defined
+}
+example();
+*/
+
+/*
+var a = 5;
+function outer() {
+  console.log(a); // 5
+  function inner() {
+    var a = 10;
+    console.log(a); // 10
+  }
+  inner();
+  console.log(a); // 5
+}
+outer();
+*/
+
+/*
+var x = 20;
+function hoistExample() {
+  console.log(x); // undefined
+  if (false) {
+    var x = 30;
+  }
+  console.log(x); // undefined
+}
+hoistExample();
+*/
