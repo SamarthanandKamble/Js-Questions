@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Combinator</title>
+  </head>
+  <body>
+    <h1>Exploring Promise Combinator</h1>
+    <ol>
+      <li>
+        <h2>Promise.all()</h2>
+        <span
+          >If any one of the promises failed, it will return the failed promise
+          else it wait till the last promise to fulfill and the return the
+          fulfilled promises array.</span
+        >
+      </li>
+      <li>
+        <h2>Promise.allSettled()</h2>
+        <span
+          >Irrespective of the state of the promise, it will return an array
+          consisting of promises and their state.</span
+        >
+      </li>
+      <li>
+        <h2>Promise.race()</h2>
+        <span
+          >As the name suggests, it is like a race.It returns the result of the
+          promise which is executing early ,irrespective of the state.</span
+        >
+      </li>
+      <li>
+        <h2>Promise.any()</h2>
+        <span
+          >It returns the first fulfilled promise, ignoring if some of the
+          promises are getting rejected. But it will return an aggregated array
+          if all the promises are getting rejected.</span
+        >
+      </li>
+    </ol>
+  </body>
+  <script src="/Promise_Combinator/script.js"></script>
+</html>
