@@ -27,5 +27,34 @@ function findShort(s) {
   }, Infinity);
 }
 
-let result = findShort("");
-console.log(result);
+// let result = findShort("");
+// console.log(result);
+
+
+// Defaming IP Address 
+/*
+Example 1:
+
+Input: address = "1.1.1.1"
+Output: "1[.]1[.]1[.]1"
+Example 2:
+
+Input: address = "255.100.50.0"
+Output: "255[.]100[.]50[.]0"
+
+
+var defangIPaddr = function (address) {
+  let newStr = "";
+  let length = address.length;
+
+  for (let i = 0; i < length; i++) {
+    if (address[i] === ".") {
+      newStr += "[" + address[i] + "]";
+    } else {
+      newStr += address[i];
+    }
+  }
+  return newStr;
+};
+
+*/
